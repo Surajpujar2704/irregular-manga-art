@@ -58,13 +58,15 @@ app.post("/api/contact", async (req, res) => {
 // No wildcard ("*") allowed in v5.
 // Instead: serve static files first.
 
-app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(cors({
+  origin: [
+    "https://irregular-manga-art.vercel.app",   // your Vercel frontend
+    "http://localhost:5173",                    // local dev mode
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
-app.use((req, res, next) => {
-  // Only send index.html for non-API routes
-  if (req.path.startsWith("/api")) return next();
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
-});
 
 
 // -----------------------------
