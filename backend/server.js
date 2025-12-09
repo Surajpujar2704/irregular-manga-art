@@ -60,12 +60,13 @@ app.post("/api/contact", async (req, res) => {
 
 app.use(cors({
   origin: [
-    "https://irregular-manga-art.vercel.app",   // your Vercel frontend
-    "http://localhost:5173",                    // local dev mode
+    "https://irregular-manga-art.vercel.app",
+    "http://localhost:5173",
+    "http://localhost:3000"
   ],
   methods: ["GET", "POST"],
-  credentials: true
 }));
+
 
 
 
