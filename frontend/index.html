@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irregular Manga Art - Robotics & Art Platform</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Irregular Manga Art</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features" onclick="comingSoon()">Creations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Where Robotics Meets Creative Art</h1>
+        <p>A unified platform showcasing advanced robotic systems and expressive manga artworks — innovation and imagination together.</p>
+        <button onclick="comingSoon()">Explore</button>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+
+        <div class="feature-card" onclick="comingSoon()" style="cursor:pointer;">
+            <h3>Agricultural UAVs</h3>
+            <p>High-end drones designed for precision farming, crop monitoring, and real-time field analytics — pushing agriculture into the future.</p>
+        </div>
+
+        <div class="feature-card" onclick="comingSoon()" style="cursor:pointer;">
+            <h3>Robotics Applications</h3>
+            <p>SLAM-powered autonomous systems, robotic vision models, and intelligent automation built for real-world deployments.</p>
+        </div>
+
+        <div class="feature-card" onclick="comingSoon()" style="cursor:pointer;">
+            <h3>Art & Sketch Models</h3>
+            <p>Hand-drawn manga, samurai sketches, and creative art models that reflect imagination, detail, and expression.</p>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+<!-- About Section -->
+<section id="about" class="info">
+    <h2>About This Platform</h2>
+    <p>
+        This platform represents a blend of two worlds — the precision of advanced robotics 
+        and the creativity of manga art. From innovative UAV systems to expressive 
+        hand-drawn sketches, IMA brings technology and artistry together in one place.
+    </p>
+    <p>
+        Our mission is to develop intelligent robotic models while continuing to explore 
+        the beauty of manga illustrations. We aim to push boundaries, inspire creativity, 
+        and build systems that make a real-world impact.
+    </p>
+    <p>
+        Whether you're here for robotics, art, or both — you're stepping into a space where 
+        imagination meets engineering.
+    </p>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have a question about our robotics models or art sketches? Send us a message!</p>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="statusMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+    <footer>
+    © 2025 Irregular Manga Art. All Rights Reserved.
+</footer>
+
+</body>
+</html>
