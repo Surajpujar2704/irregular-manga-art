@@ -1,3 +1,4 @@
+// Your Render backend URL
 const backendURL = "https://irregular-manga-art.onrender.com";
 
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
@@ -15,8 +16,14 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     });
 
     const data = await res.json();
-    if (data.ok) alert("Message sent!");
-    else alert("Server error!");
+
+    if (data.ok) {
+      alert("Message sent!");
+      document.getElementById("contactForm").reset();
+    } else {
+      alert("Server error!");
+    }
+
   } catch (err) {
     alert("Could not connect to backend!");
     console.error(err);
