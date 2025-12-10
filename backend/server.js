@@ -59,13 +59,10 @@ app.post("/api/contact", async (req, res) => {
 // Instead: serve static files first.
 
 app.use(cors({
-  origin: [
-    "https://irregular-manga-art.vercel.app",
-    "http://localhost:5173",
-    "http://localhost:3000"
-  ],
+  origin: "https://irregular-manga-art.vercel.app",
   methods: ["GET", "POST"],
 }));
+
 
 
 
@@ -73,7 +70,8 @@ app.use(cors({
 // -----------------------------
 // START SERVER
 // -----------------------------
-app.listen(PORT, "127.0.0.1", () =>
+app.listen(PORT, "0.0.0.0", () =>
   console.log(`Backend running on ${PORT}`)
 );
+
 
